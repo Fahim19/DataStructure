@@ -1,0 +1,40 @@
+#include<iostream>
+#include <stdio.h>
+using namespace std;
+int main()
+{
+    int arr[100];
+    int k, i, j, n;
+
+    printf("Enter how many number you want to input: ");
+    scanf("%d", &n);
+
+    for(k = 1; k <= n; ++k)
+        scanf("%d", &arr[k]);
+
+    printf("\nWhich position you want to insert: ");
+    scanf("%d", &i);
+
+
+    j = n;
+    while(j >= i)
+    {
+        arr[j + 1] = arr[j];
+        j--;
+    }
+
+    printf("\nInsert you Data: ");
+    scanf("%d", &arr[i]);
+
+    n++;
+  
+    printf("\nNew Array is: ");
+    k = 1;
+    while(k <= n){
+        printf("%d ", arr[k]);
+        k++;
+    }
+    printf("\n");
+
+    return 0;
+}
